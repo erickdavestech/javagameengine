@@ -4,11 +4,7 @@ plugins {
 group = 'org.erickdavestech.javagameengine'
 version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
- // Gradle ! LWJGJ-3
+// Gradle ! LWJGJ-3
 project.ext.lwjglVersion = "3.2.3"
 project.ext.jomlVersion = "1.10.7"
 project.ext.lwjglNatives = "natives-windows"
