@@ -34,7 +34,7 @@ public class Window {
     }
         // Run
     public void run() {
-        System.out.println("Hi This Is My Java Game Engine By ErickDavesTech");
+        System.out.println("Hi This Is My Java Game Engine By ErickDTech");
         System.out.println("Hello LWJGL " + Version.getVersion() + "!");
         init();
         loop();
@@ -58,7 +58,7 @@ public class Window {
         // If failed to create the window
         if(glfwWindow ==NULL){
           throw new IllegalStateException("Failed to create the GLFW window");
-        };
+        }
         // Make the OpenGl context for the current long glfwWindow
         glfwMakeContextCurrent(glfwWindow);
         // Enable V-sync
@@ -67,7 +67,7 @@ public class Window {
         glfwShowWindow(glfwWindow);
         //
         GL.createCapabilities();
-    };
+    }
     public void loop(){
         while (!glfwWindowShouldClose(glfwWindow)){
             glfwPollEvents();
@@ -76,6 +76,6 @@ public class Window {
             glClear(GL_COLOR_BUFFER_BIT);
 
             glfwSwapBuffers(glfwWindow);
-        };
-    };
+        }
+    }
 }
