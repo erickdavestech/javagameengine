@@ -20,8 +20,8 @@ public class Window {
 
 
     private Window() {
-        this.width = 1920;
-        this.height = 1080;
+        this.width = 1280;
+        this.height = 720;
         this.title = "Mario";
     }
 
@@ -52,7 +52,7 @@ public class Window {
         glfwDefaultWindowHints();
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
-        glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
+        glfwWindowHint(GLFW_MAXIMIZED, GLFW_FALSE);
         // Create Window,
         glfwWindow = glfwCreateWindow(this.width, this.height, this.title, NULL, NULL);
         // If failed to create the window
