@@ -3,7 +3,6 @@ package jade;
 import org.lwjgl.Version;
 // For CallBack error
 import org.lwjgl.glfw.GLFWErrorCallback;
-
 import org.lwjgl.opengl.GL;
 // For glfw Initialization
 import static org.lwjgl.glfw.GLFW.*;
