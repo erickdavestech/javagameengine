@@ -3,12 +3,12 @@ package jade;
 import org.lwjgl.Version;
 // For CallBack error
 import org.lwjgl.glfw.GLFWErrorCallback;
-
 import org.lwjgl.opengl.GL;
 // For glfw Initialization
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
+import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 
 
 public class Window {
@@ -38,6 +38,15 @@ public class Window {
         System.out.println("Hello LWJGL " + Version.getVersion() + "!");
         init();
         loop();
+
+        // Free The Memory
+        glfwFreeCallbacks(glfwWindow);
+        glfwDestroyWindow(glfwWindow);
+
+        // Terminate GLFW and Free the Error CallBack
+        glfwTerminate();
+        glfwSetErrorCallback(null).free();
+
 
     }
 
